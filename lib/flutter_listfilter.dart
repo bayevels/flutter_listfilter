@@ -119,14 +119,14 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                 flutterListFilterBloc.add(FilterLoadEvent({}));
               },
               child: (filterState.map.length) > 1
-                  ? Text("Clear All",
-                  style: TextStyle(
-                    color: widget.primaryColor,
-                  ))
-                  : Text("Clear",
-                  style: TextStyle(
-                    color: widget.primaryColor,
-                  )),
+                  ? Text("Tout effacer",
+                      style: TextStyle(
+                        color: widget.primaryColor,
+                      ))
+                  : Text("Effacer",
+                      style: TextStyle(
+                        color: widget.primaryColor,
+                      )),
             ),
           ),
         ],
@@ -149,9 +149,11 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                               context: context,
                               isDismissible: widget.isRadio,
                               shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10),
-                                      topRight: Radius.circular(10))),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
                               builder: (BuildContext context) =>
                                   openBottomSheet(key, map));
                         },
@@ -252,7 +254,7 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: Text("Apply",
+                                  child: Text("Enregistrer",
                                       style: TextStyle(
                                         color: widget.primaryColor,
                                       )),
@@ -267,7 +269,7 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                                       .add(FilterLoadEvent(map));
                                   Navigator.pop(context);
                                 },
-                                child: const Text("Clear",
+                                child: const Text("Effacer",
                                     style: TextStyle(
                                       color: Colors.red,
                                     )),
