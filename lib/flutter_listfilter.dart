@@ -242,7 +242,7 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(15, 0, 0, 15),
                             child: Text(
-                              "Sort By ${key.key}",
+                              "Filtrer par ${key.key}",
                               style: TextStyle(color: widget.lineColor),
                             ),
                           ),
@@ -254,7 +254,7 @@ class _FlutterListFilterState extends State<FlutterListFilter> {
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: Text("Enregistrer",
+                                  child: Text("Filtrer",
                                       style: TextStyle(
                                         color: widget.primaryColor,
                                       )),
